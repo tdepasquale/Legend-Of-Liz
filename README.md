@@ -1,44 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Legend Of Liz
 
-## Available Scripts
+A rogue-lite adventure game built with Typescript, HTML, and CSS. Published as a PWA.
 
-In the project directory, you can run:
+## Story 
 
-### `npm start`
+It is a dark time for the inhabitants of Earth. Emperor Covidius and his stealth army have seized control of the planet. People are holed up in their houses, afraid to venture out. In an attempt to stifle the rebellion once and for all, the fiendish Covidius has swept into New York and kidnapped Tom. This has gone too far. The reign of Emperor Covidius must come to an end....
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You play as the heroic Liz, and attempt to save Tom from the clutches of the evil Emperor Covidius.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## How to Win
 
-### `npm test`
+Players must figure out how to obtain the 3 pieces of the tri-force, locate the evil Emperor Covidius, and defeat him!
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Randomly Generated Map
 
-### `npm run build`
+A random set of 3 key locations is chosen for each run. Then the set of locations are randomly placed on the map. This creates variety between runs. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Overworld
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+On the overworld screen players can either choose to move or to explore their current location. Players are given 2 movement points before they are forced to explore. Players should read the location description carefully to avoid exploring trap locations. Players can move North, South, East or West on the map. Players should take note of how the map is layed out so they can avoid traps and easily navigate to where they want to go.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Exploring Locations
 
-### `npm run eject`
+Most locations have an item that you can take. Your inventory can only contain 1 item, which will be replaced when you pick up another item. Each location has a description of what is going on there, which contains a clue as to which item is required. Players must deduce where to use each item. Not every item is used in every run. Through clever deduction, players will locate the 3 pieces of the tri-force. After doing so they must locate the boss and fight it.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Threat
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Every action you take in the game causes your threat level to increase. As it increases so does your chance of having a surprise, timed encounter with a virus instead of taking the action that you intended! In order to survive the encounter you must tap / click on viruses until the threat counter is reduced to zero, and then click the "Destroy Virus" button. If you fail to do so before the timer runs out, you succumb to the evil Emperor Covidius and the game is over.
