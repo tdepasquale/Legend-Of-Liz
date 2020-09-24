@@ -1,0 +1,184 @@
+@font-face {
+  src: url("./fonts/zeldaFont.otf");
+  font-family: zelda;
+}
+
+* {
+  font-family: zelda;
+  overflow: hidden;
+  background-color: beige;
+}
+
+body {
+  max-width: 750px;
+  margin: auto;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  height: 64vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: beige;
+}
+
+.centered-menu {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: beige;
+}
+
+.pure-button {
+  border: 2px solid beige;
+  width: 100%;
+}
+
+.title-screen {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: beige;
+  text-align: center;
+  align-items: center;
+  line-height: 85px;
+}
+
+.title-above {
+  font-size: 30px;
+  transform: translate(38px, 30px);
+}
+
+.title-name {
+  font-size: 200px;
+  overflow: visible;
+  z-index: 20;
+}
+
+.title-below {
+  font-size: 30px;
+  transform: translateY(20px);
+  margin-bottom: 55px;
+}
+
+.story-text {
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 55px;
+  margin-top: 55px;
+}
+
+.location-title {
+  text-align: center;
+  font-size: 45px;
+}
+
+.threat {
+  color: red;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+}
+
+.item {
+  color: green;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+}
+
+.triforce {
+  color: goldenrod;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+}
+
+.timer {
+  color: goldenrod;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+}
+
+.enemies-remaining {
+  color: red;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+}
+
+.continue {
+  color: green;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+  margin-top: 3px;
+}
+
+.grid {
+  display: grid;
+  max-width: 384px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 3px;
+}
+
+.square {
+  height: 128px;
+  border: 1px solid goldenrod;
+}
+
+.enemy {
+  background-image: url("./images/virus.png");
+  background-size: cover;
+  background-position-x: center;
+}
+
+.game-over-text {
+  color: red;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid beige;
+}
+
+.game-over-tip {
+  color: green;
+  background-color: white;
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+  border: 2px solid beige;
+  margin-top: 25px;
+}
+
+.victory-text {
+  color: green;
+  background-color: white;
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+  border: 2px solid beige;
+}
