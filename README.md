@@ -1,6 +1,6 @@
 # Legend Of Liz
 
-A rogue-lite adventure game built with Typescript, HTML, and CSS. Published as a PWA.
+A rogue-lite adventure game built with React, Typescript, HTML5, and CSS3. Published as a PWA.
 
 ## Story 
 
