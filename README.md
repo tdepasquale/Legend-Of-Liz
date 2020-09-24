@@ -14,7 +14,7 @@ Players must figure out how to obtain the 3 pieces of the tri-force, locate the 
 
 ## Randomly Generated Map
 
-A random set of 3 key locations is chosen for each run. Then the set of locations are randomly placed on the map. This creates variety between runs. 
+A random set of 3 key locations is chosen for each run. Then the set of locations are randomly placed on the map. You start the game at a random location on the map. This creates variety between runs. 
 
 ## Overworld
 
