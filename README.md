@@ -18,11 +18,11 @@ A random set of 3 key locations is chosen for each run. Then the set of location
 
 ## Overworld
 
-On the overworld screen players can either choose to move or to explore their current location. Players are given 2 movement points before they are forced to explore. Players should read the location description carefully to avoid exploring trap locations. Players can move North, South, East or West on the map. Players should take note of how the map is layed out so they can avoid traps and easily navigate to where they want to go.
+On the overworld screen players can either choose to move or to explore their current location. Players are given 2 movement points before they are forced to explore. Players should read the location description carefully to avoid exploring trap locations. Players can move North, South, East or West on the map. Players should take note of how the map is laid out so they can avoid traps and easily navigate to where they want to go.
 
 ## Exploring Locations
 
-Most locations have an item that you can take. Your inventory can only contain 1 item, which will be replaced when you pick up another item. Each location has a description of what is going on there, which contains a clue as to which item is required. Players must deduce where to use each item. Not every item is used in every run. Through clever deduction, players will locate the 3 pieces of the tri-force. After doing so they must locate the boss and fight it.
+Most locations have an item that you can take. Your inventory can only contain 1 item, which will be replaced when you pick up another one. Each location has a description of what is going on there, which contains a clue as to which item is required. Players must deduce where to use each item. Not every item is used in every run. Through clever deduction, players will locate the 3 pieces of the tri-force. After doing so they must locate the boss and fight it.
 
 ## Threat
 
