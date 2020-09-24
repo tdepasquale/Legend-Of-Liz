@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { useMap } from "./components/useMap";
-import { TitleScreen } from "./components/TitleScreen";
-import { IntroStory } from "./components/IntroStory";
-import { inventory } from "./models";
-import { StartCombat } from "./components/StartCombat";
-import { GameOverScreen } from "./components/GameOverScreen";
-import { VictoryScreen } from "./components/VictoryScreen";
 import { FinalBoss } from "./components/FinalBoss";
+import { GameOverScreen } from "./components/GameOverScreen";
+import { IntroStory } from "./components/IntroStory";
+import { StartCombat } from "./components/StartCombat";
+import { TitleScreen } from "./components/TitleScreen";
+import { useMap } from "./components/useMap";
+import { VictoryScreen } from "./components/VictoryScreen";
+import { inventory } from "./models";
 
 function App() {
   enum menu {
@@ -24,31 +24,34 @@ function App() {
   const [currentMenu, setCurrentMenu] = useState(menu.title);
   const map = useMap();
 
-  const [inventory, setInventory] = useState<inventory>({
+  const initialInventory: inventory = {
     triforcePiecesCollected: [],
     currentItem: "none",
-  });
+  };
+  const [inventory, setInventory] = useState<inventory>(initialInventory);
 
   const handleSetInventory = (inventory: inventory) => {
     setInventory(inventory);
     setCurrentMenu(menu.explore);
   };
 
-  const [threat, setThreat] = useState(0);
+  const initialThreat = 0;
+  const [threat, setThreat] = useState(initialThreat);
 
   const handleIncreaseThreat = (amount: number = 2) => {
     setThreat((prev) => prev + amount);
   };
 
-  useEffect(() => {
-    map.getLocationInfo();
-  }, [map]);
+  const initialMovePoints = 1;
+  let [movePoints, setMovePoints] = useState(initialMovePoints);
 
-  useEffect(() => {
-    console.log(inventory);
-  }, [inventory]);
-
-  let [movePoints, setMovePoints] = useState(1);
+  const handleRestartGame = () => {
+    map.reset();
+    setInventory(initialInventory);
+    setThreat(initialThreat);
+    setMovePoints(initialMovePoints);
+    setCurrentMenu(menu.intro);
+  };
 
   const north = "NORTH",
     south = "SOUTH",
@@ -190,7 +193,7 @@ function App() {
               LeaveButton,
               handleTrapThreat,
               handleTrapLost,
-              goToBoss
+              goToBoss,
             )}
           </div>
         </div>
@@ -231,7 +234,7 @@ function App() {
         />
       );
     case menu.gameOver:
-      return <GameOverScreen />;
+      return <GameOverScreen retry={handleRestartGame} />;
     case menu.gameWin:
       return <VictoryScreen />;
     case menu.boss:

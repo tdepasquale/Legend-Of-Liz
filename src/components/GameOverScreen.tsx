@@ -1,8 +1,15 @@
 import React from "react";
 
-export const GameOverScreen = () => {
+interface IProps {
+  retry: () => void;
+}
+
+export const GameOverScreen: React.FC<IProps> = ({ retry }) => {
   return (
     <div className="centered-menu">
+      <button className="pure-button" onClick={retry}>
+        Try Again
+      </button>
       <div className="game-over-text">Game Over</div>
       <div className="game-over-tip">
         Tip: Click / tap on the viruses to lower the threat count. When the

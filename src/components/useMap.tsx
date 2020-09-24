@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { location, gridPosition, inventory } from "../models";
+import { gridPosition, inventory, location } from "../models";
 import { getZeldaMap } from "./zeldaLocations";
 
 export const gridWidth = 4;
@@ -13,11 +13,16 @@ export const randomGridLocation = (): gridPosition => {
 };
 
 export const useMap = () => {
-  let [grid] = useState<location[][]>(() => getZeldaMap());
+  let [grid, setGrid] = useState<location[][]>(() => getZeldaMap());
 
   const [currentLocation, setCurrentLocation] = useState<gridPosition>(
-    randomGridLocation()
+    randomGridLocation(),
   );
+
+  const reset = () => {
+    setGrid(() => getZeldaMap());
+    setCurrentLocation(randomGridLocation());
+  };
 
   const getLost = () => {
     let newLocation = randomGridLocation();
@@ -56,12 +61,9 @@ export const useMap = () => {
     getLocationInfo();
   };
 
+  // for debugging / testing purposes
   const getLocationInfo = () => {
-    // console.log(
-    //   `${currentLocation.x}, ${currentLocation.y} NAME: ${
-    //     grid[currentLocation.y][currentLocation.x].name
-    //   }`
-    // );
+    console.log("map", grid, "current location", currentLocation);
   };
 
   const getNameText = () => {
@@ -83,7 +85,7 @@ export const useMap = () => {
     LeaveButton: () => JSX.Element,
     handleTrapThreat: () => void,
     handleTrapLost: () => void,
-    goToBoss: () => void
+    goToBoss: () => void,
   ) => {
     return grid[currentLocation.y][currentLocation.x].actions(
       inventory,
@@ -92,7 +94,7 @@ export const useMap = () => {
       LeaveButton,
       handleTrapThreat,
       handleTrapLost,
-      goToBoss
+      goToBoss,
     );
   };
 
@@ -107,5 +109,6 @@ export const useMap = () => {
     getDescriptionText,
     getActions,
     getLost,
+    reset,
   };
 };
