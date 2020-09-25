@@ -1,4 +1,5 @@
 import React from "react";
+import { hurtSFX } from "../App";
 import { location } from "../models";
 import { gridHeight, gridWidth } from "./useMap";
 
@@ -32,11 +33,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = emptyBottle;
         const itemNeed = sword;
         const itemGet2 = rupees;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -62,7 +67,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -81,11 +86,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = sword;
         const itemNeed = bomb;
         const itemGet2 = ruby;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -111,7 +120,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -131,11 +140,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = bomb;
         const itemNeed = bowAndArrows;
         const itemGet2 = invisibilityPotion;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -161,7 +174,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -180,11 +193,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = bowAndArrows;
         const itemNeed = fireRod;
         const itemGet2 = blueFrog;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -210,7 +227,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -230,11 +247,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = hookshot;
         const itemNeed = lightningRod;
         const itemGet2 = popcorn;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -260,7 +281,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -280,11 +301,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = fireRod;
         const itemNeed = waterRod;
         const itemGet2 = crosswordPuzzles;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -310,7 +335,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -330,11 +355,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = lightningRod;
         const itemNeed = hookshot;
         const itemGet2 = ocarina;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -360,7 +389,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -379,11 +408,15 @@ const zeldaLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = waterRod;
         const itemNeed = emptyBottle;
         const itemGet2 = fairy;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
         return (
           <React.Fragment>
             <button
@@ -409,7 +442,7 @@ const zeldaLocations = (): location[] => {
                         inventory.triforcePiecesCollected,
                       currentItem: itemGet2,
                     })
-                  : handleIncreaseThreat()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -434,10 +467,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = emptyBottle;
         const itemNeed = rupees;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -458,13 +506,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -483,10 +526,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = sword;
         const itemNeed = ruby;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -507,13 +565,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -533,10 +586,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = bomb;
         const itemNeed = invisibilityPotion;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -557,13 +625,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -583,10 +646,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = bowAndArrows;
         const itemNeed = blueFrog;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -607,13 +685,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -633,10 +706,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = fireRod;
         const itemNeed = popcorn;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -657,13 +745,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -682,10 +765,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = lightningRod;
         const itemNeed = crosswordPuzzles;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -706,13 +804,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -732,10 +825,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = waterRod;
         const itemNeed = ocarina;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -756,13 +864,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -782,10 +885,25 @@ const zeldaKeyLocations = (): location[] => {
         inventory,
         handleSetInventory,
         handleIncreaseThreat,
-        LeaveButton
+        LeaveButton,
       ) => {
         const itemGet1 = hookshot;
         const itemNeed = fairy;
+        const usedWrongItem = () => {
+          handleIncreaseThreat();
+          hurtSFX.play();
+        };
+        const gotTriforce = () => {
+          handleSetInventory(
+            {
+              triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
+                [itemNeed],
+              ),
+              currentItem: inventory.currentItem,
+            },
+            true,
+          );
+        };
         return (
           <React.Fragment>
             <button
@@ -806,13 +924,8 @@ const zeldaKeyLocations = (): location[] => {
               disabled={inventory.triforcePiecesCollected.includes(itemNeed)}
               onClick={() =>
                 inventory.currentItem === itemNeed
-                  ? handleSetInventory({
-                      triforcePiecesCollected: inventory.triforcePiecesCollected.concat(
-                        [itemNeed]
-                      ),
-                      currentItem: inventory.currentItem,
-                    })
-                  : handleIncreaseThreat()
+                  ? gotTriforce()
+                  : usedWrongItem()
               }
             >
               Use {inventory.currentItem}
@@ -836,7 +949,7 @@ const zeldaTrapLocations = (): location[] => {
         handleSetInventory,
         handleIncreaseThreat,
         LeaveButton,
-        handleTrapThreat
+        handleTrapThreat,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapThreat()}>
@@ -854,7 +967,7 @@ const zeldaTrapLocations = (): location[] => {
         handleSetInventory,
         handleIncreaseThreat,
         LeaveButton,
-        handleTrapThreat
+        handleTrapThreat,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapThreat()}>
@@ -872,7 +985,7 @@ const zeldaTrapLocations = (): location[] => {
         handleSetInventory,
         handleIncreaseThreat,
         LeaveButton,
-        handleTrapThreat
+        handleTrapThreat,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapThreat()}>
@@ -890,7 +1003,7 @@ const zeldaTrapLocations = (): location[] => {
         handleSetInventory,
         handleIncreaseThreat,
         LeaveButton,
-        handleTrapThreat
+        handleTrapThreat,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapThreat()}>
@@ -909,7 +1022,7 @@ const zeldaTrapLocations = (): location[] => {
         handleIncreaseThreat,
         LeaveButton,
         handleTrapThreat,
-        handleTrapLost
+        handleTrapLost,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapLost()}>
@@ -929,7 +1042,7 @@ const zeldaTrapLocations = (): location[] => {
         handleIncreaseThreat,
         LeaveButton,
         handleTrapThreat,
-        handleTrapLost
+        handleTrapLost,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapLost()}>
@@ -949,7 +1062,7 @@ const zeldaTrapLocations = (): location[] => {
         handleIncreaseThreat,
         LeaveButton,
         handleTrapThreat,
-        handleTrapLost
+        handleTrapLost,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapLost()}>
@@ -970,7 +1083,7 @@ const zeldaTrapLocations = (): location[] => {
         handleIncreaseThreat,
         LeaveButton,
         handleTrapThreat,
-        handleTrapLost
+        handleTrapLost,
       ) => {
         return (
           <button className="pure-button" onClick={() => handleTrapLost()}>
@@ -996,7 +1109,7 @@ const zeldaBossLocations = (): location[] => {
         LeaveButton,
         handleTrapThreat,
         handleLostThreat,
-        goToBoss
+        goToBoss,
       ) => {
         return (
           <React.Fragment>
@@ -1031,7 +1144,7 @@ export const getZeldaMap = (): location[][] => {
   let possibleKeyRooms = zeldaKeyLocations();
   for (let index = 0; index < keyRoomsNeeded; index++) {
     let randomKeyRoomNumber = Math.floor(
-      Math.random() * possibleKeyRooms.length
+      Math.random() * possibleKeyRooms.length,
     );
     let chosenKeyRoom = possibleKeyRooms.splice(randomKeyRoomNumber, 1);
     keyRooms.push(chosenKeyRoom[0]);
@@ -1040,7 +1153,7 @@ export const getZeldaMap = (): location[][] => {
   let bossRoom: location[] = [];
   let possibleBossRoom = zeldaBossLocations();
   bossRoom.push(
-    possibleBossRoom[Math.floor(Math.random() * zeldaBossLocations().length)]
+    possibleBossRoom[Math.floor(Math.random() * zeldaBossLocations().length)],
   );
 
   let map: location[][] = [];

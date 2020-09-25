@@ -4,12 +4,12 @@ export interface location {
   description: string;
   actions: (
     inventory: inventory,
-    handleSetInventory: (inventory: inventory) => void,
+    handleSetInventory: (inventory: inventory, isTriforce?: boolean) => void,
     handleInscreaseThreat: () => void,
     LeaveButton: () => JSX.Element,
     handleTrapThreat: () => void,
     handleTrapLost: () => void,
-    goToBoss: () => void
+    goToBoss: () => void,
   ) => JSX.Element;
 }
 

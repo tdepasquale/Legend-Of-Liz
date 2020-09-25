@@ -80,7 +80,7 @@ export const useMap = () => {
 
   const getActions = (
     inventory: inventory,
-    handleSetInventory: (inventory: inventory) => void,
+    handleSetInventory: (inventory: inventory, isTriforce?: boolean) => void,
     handleInscreaseThreat: () => void,
     LeaveButton: () => JSX.Element,
     handleTrapThreat: () => void,

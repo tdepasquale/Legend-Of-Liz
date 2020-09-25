@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { bossExplodeSFX, enemyHitSFX, hurtSFX } from "../App";
 
 interface IProps {
   handleGameOver: () => void;
@@ -73,7 +74,7 @@ export const FinalBoss: React.FC<IProps> = ({
   };
 
   const handleHitEnemy = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>,
   ) => {
     event.currentTarget.classList.contains("enemy")
       ? hitEnemy()
@@ -81,10 +82,12 @@ export const FinalBoss: React.FC<IProps> = ({
   };
 
   const missedEnemy = () => {
+    hurtSFX.play();
     setEnemies((prev) => prev + 1);
   };
 
   const hitEnemy = () => {
+    enemyHitSFX.play();
     setEnemies((prev) => prev - 1);
     moveEnemy();
   };
@@ -111,6 +114,7 @@ export const FinalBoss: React.FC<IProps> = ({
   }, [timer]);
 
   const continueButton = () => {
+    bossExplodeSFX.play();
     handleContinue();
   };
 

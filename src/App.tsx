@@ -1,3 +1,4 @@
+import { Howl } from "howler";
 import React, { useState } from "react";
 import "./App.css";
 import { FinalBoss } from "./components/FinalBoss";
@@ -8,6 +9,40 @@ import { TitleScreen } from "./components/TitleScreen";
 import { useMap } from "./components/useMap";
 import { VictoryScreen } from "./components/VictoryScreen";
 import { inventory } from "./models";
+
+export const hurtSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Link_Hurt.wav"],
+});
+
+export const enemyHitSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Enemy_Hit.wav"],
+});
+
+export const bossExplodeSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Boss_Explode.wav"],
+});
+
+export const enemyExplodeSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Enemy_Die.wav"],
+});
+
+export const fallSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Link_Fall.wav"],
+});
+
+export const gameOverSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Link_Dying.wav"],
+});
+
+export const gotTriforceSFX = new Howl({
+  src: [
+    "http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Fanfare_Item_Extended.wav",
+  ],
+});
+
+export const gotItemSFX = new Howl({
+  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Get_Item2.wav"],
+});
 
 function App() {
   enum menu {
@@ -30,7 +65,8 @@ function App() {
   };
   const [inventory, setInventory] = useState<inventory>(initialInventory);
 
-  const handleSetInventory = (inventory: inventory) => {
+  const handleSetInventory = (inventory: inventory, isTriforce = false) => {
+    isTriforce ? gotTriforceSFX.play() : gotItemSFX.play();
     setInventory(inventory);
     setCurrentMenu(menu.explore);
   };
@@ -161,11 +197,13 @@ function App() {
   const handleTrapThreat = () => {
     handleIncreaseThreat(4);
     setCurrentMenu(menu.overworld);
+    hurtSFX.play();
   };
 
   const handleTrapLost = () => {
     map.getLost();
     setCurrentMenu(menu.overworld);
+    fallSFX.play();
   };
 
   const goToBoss = () => {
@@ -203,6 +241,7 @@ function App() {
 
   const handleGameOver = () => {
     setCurrentMenu(menu.gameOver);
+    gameOverSFX.play();
   };
 
   const handleGameWin = () => {
