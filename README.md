@@ -27,3 +27,9 @@ Most locations have an item that you can take. Your inventory can only contain 1
 ## Threat
 
 Every action you take in the game causes your threat level to increase. As it increases so does your chance of having a surprise, timed encounter with a virus instead of taking the action that you intended! In order to survive the encounter you must tap / click on viruses until the threat counter is reduced to zero, and then click the "Destroy Virus" button. If you fail to do so before the timer runs out, you succumb to the evil Emperor Covidius and the game is over.
+
+# Dependencies
+
+## Howler
+
+Howler is used to play sound effects.
