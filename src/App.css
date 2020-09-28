@@ -152,10 +152,20 @@ body {
   background-position-x: center;
 }
 
+.square-illusion {
+  height: 128px;
+  border: 1px solid goldenrod;
+  background-image: url("./images/virus.png");
+  background-size: cover;
+  background-position-x: center;
+  opacity: 0.5;
+}
+
 .enemy {
   background-image: url("./images/virus.png");
   background-size: cover;
   background-position-x: center;
+  opacity: 1;
 }
 
 .game-over-text {

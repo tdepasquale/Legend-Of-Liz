@@ -128,55 +128,55 @@ export const FinalBoss: React.FC<IProps> = ({
         <div
           id="1"
           ref={square1}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="2"
           ref={square2}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="3"
           ref={square3}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="4"
           ref={square4}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="5"
           ref={square5}
-          className="enemy square"
+          className="enemy square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="6"
           ref={square6}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="7"
           ref={square7}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="8"
           ref={square8}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
         <div
           id="9"
           ref={square9}
-          className="square"
+          className="square-illusion"
           onClick={handleHitEnemy}
         ></div>
       </div>
