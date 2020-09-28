@@ -147,6 +147,9 @@ body {
 .square {
   height: 128px;
   border: 1px solid goldenrod;
+  background-image: url("./images/spike-ball.png");
+  background-size: cover;
+  background-position-x: center;
 }
 
 .enemy {
