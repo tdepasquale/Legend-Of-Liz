@@ -11,37 +11,37 @@ import { VictoryScreen } from "./components/VictoryScreen";
 import { inventory } from "./models";
 
 export const hurtSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Link_Hurt.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Link_Hurt.wav"],
 });
 
 export const enemyHitSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Enemy_Hit.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Enemy_Hit.wav"],
 });
 
 export const bossExplodeSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Boss_Explode.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Boss_Explode.wav"],
 });
 
 export const enemyExplodeSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Enemy_Die.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Enemy_Die.wav"],
 });
 
 export const fallSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Link_Fall.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Link_Fall.wav"],
 });
 
 export const gameOverSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Link_Dying.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Link_Dying.wav"],
 });
 
 export const gotTriforceSFX = new Howl({
   src: [
-    "http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Fanfare_Item_Extended.wav",
+    "https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Fanfare_Item_Extended.wav",
   ],
 });
 
 export const gotItemSFX = new Howl({
-  src: ["http://noproblo.dayjo.org/ZeldaSounds/LA/LA_Get_Item2.wav"],
+  src: ["https://legend-of-liz.s3.us-east-2.amazonaws.com/LA_Get_Item2.wav"],
 });
 
 function App() {
