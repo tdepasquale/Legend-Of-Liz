@@ -34,3 +34,4 @@ Every action you take in the game causes your threat level to increase. As it in
 
 Howler is used to play sound effects.
 Sound Effects were found here: http://noproblo.dayjo.org/ZeldaSounds/
+The sound effects are stored in an AWS bucket to maintain https since the original site is not secure.
